@@ -12,6 +12,12 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        PTSans: ["PT Sans", 'serif'],
+        Poppins: ["Poppins", 'serif'],
+        JosefinSans: ["Josefin Sans", 'serif'],
+  
+      }
     },
   },
   plugins: [],

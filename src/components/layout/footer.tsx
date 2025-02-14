@@ -29,9 +29,12 @@ const Footer: React.FC = () => {
               At Vision Designing, we specialize in crafting compelling websites, developing innovative apps, and managing dynamic social media pages. 
               Our vision is to seamlessly blend creativity and technology for impactful digital solutions.
             </p>
-            <p className="mt-4 font-semibold text-lg font-JosefinSans">info@visiondesigning.com</p>
+            <p className="mt-4 font-semibold text-lg font-JosefinSans">
+              <a href="mailto:info@visiondesigning.com" className="text-white">info@visiondesigning.com</a>
+            </p>
             <p className="mt-1 text-gray-300 flex items-center justify-center lg:justify-start">
-              <span className="mr-2 font-JosefinSans"><FaPhone /></span> +1240-755-7722
+              <span className="mr-2 font-JosefinSans"><FaPhone /></span> 
+              <a href="tel:+12407557722" className="text-white">+1240-755-7722</a>
             </p>
           </div>
 

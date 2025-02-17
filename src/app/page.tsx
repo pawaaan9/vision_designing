@@ -5,6 +5,7 @@ import Services from "../components/pages/services";
 import { Contact } from "@/components/pages/contact";
 
 import Stats from "@/components/pages/happyclients";
+import Portfolio from "@/components/pages/ourwork";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Services/>
       <Contact/>
       <Stats />
+      <Portfolio />
       <Footer/>
     </>
   );

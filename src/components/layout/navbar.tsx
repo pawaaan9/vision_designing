@@ -43,19 +43,19 @@ const Navbar: React.FC = () => {
               Services
             </Link>
             <Link
-              href="#ourwork"
+              href="ourwork"
               className="text-[#ffffff] px-3 py-2 rounded-md text-sm font-medium uppercase font-JosefinSans"
             >
               Our Work
             </Link>
             <Link
-              href="#blog"
+              href="blog"
               className="text-[#ffffff] px-3 py-2 rounded-md text-sm font-medium uppercase font-JosefinSans"
             >
               Blog
             </Link>
             <Link
-              href="#contact"
+              href="contact"
               className="text-[#ffffff] px-3 py-2 rounded-md text-sm font-medium uppercase font-JosefinSans"
             >
               Contact

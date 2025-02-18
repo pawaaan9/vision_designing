@@ -19,7 +19,7 @@ import id13 from "../../assets/branding/2bae7466-d36d-4b30-a4f3-4c86c314fc09_bla
 import id15 from "../../assets/branding/handle-man-business-card-300x300.png";
 
 const projects = [
-  { id: 1, title: "skipjackOutfitters.com", category: "website", link: "/projects/skipjack", image: skipjackImage },
+  { id: 1, title: "skipjackOutfitters.com", category: "website", link: "/ourwork/skipjack", image: skipjackImage },
   { id: 2, title: "sdkwelding.ca", category: "website", link: "/projects/banking-app", image: sdkwelding },
   { id: 3, title: "langstonavenuescoaching.com", category: "website", link: "/projects/saas-dashboard", image: langstonavenuescoaching },
   { id: 4, title: "holycrabdelivery.com", category: "website", link: "/projects/portfolio", image: holycrabdelivery},

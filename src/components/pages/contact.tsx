@@ -13,7 +13,7 @@ export function Contact() {
         </h1>
         <p className="text-neutral-500 mt-2">
           Get in touch with us for any queries or collaborations. Fill out the
-          form below and we'll get back to you soon!
+          form below and we&apos;ll get back to you soon!
         </p>
       </div>
 

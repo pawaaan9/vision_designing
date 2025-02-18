@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { BackgroundBeams } from "../ui/background-beams";
-import { image } from "framer-motion/client";
 import skipjackImage from "../../assets/skipjack.png";
 import sdkwelding from "../../assets/sdk-welding.png";
 import langstonavenuescoaching from "../../assets/langstonavenuescoaching.png";

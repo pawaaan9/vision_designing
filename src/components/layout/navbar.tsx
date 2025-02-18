@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import logo from '@/assets/Vision-Designing-Logo.png'
 
 const Navbar: React.FC = () => {
@@ -23,42 +24,42 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="hidden md:flex items-center space-x-5">
-          <a
-              href="#home"
+            <Link
+              href="/"
               className="text-[#ffffff] px-3 py-2 rounded-md text-sm font-medium font-JosefinSans uppercase"
             >
               Home
-            </a>
-            <a
-              href="#about"
+            </Link>
+            <Link
+              href="about"
               className="text-[#ffffff] px-3 py-2 rounded-md text-sm font-medium uppercase font-JosefinSans"
             >
               About
-            </a>
-            <a
-              href="#services"
+            </Link>
+            <Link
+              href="services"
               className="text-[#ffffff] px-3 py-2 rounded-md text-sm font-medium uppercase font-JosefinSans"
             >
               Services
-            </a>
-            <a
+            </Link>
+            <Link
               href="#ourwork"
               className="text-[#ffffff] px-3 py-2 rounded-md text-sm font-medium uppercase font-JosefinSans"
             >
               Our Work
-            </a>
-            <a
-              href="#ourwork"
+            </Link>
+            <Link
+              href="#blog"
               className="text-[#ffffff] px-3 py-2 rounded-md text-sm font-medium uppercase font-JosefinSans"
             >
               Blog
-            </a>
-            <a
+            </Link>
+            <Link
               href="#contact"
               className="text-[#ffffff] px-3 py-2 rounded-md text-sm font-medium uppercase font-JosefinSans"
             >
               Contact
-            </a>
+            </Link>
           </div>
 
           <div className="-mr-2 flex md:hidden">
@@ -110,57 +111,57 @@ const Navbar: React.FC = () => {
         id="mobile-menu"
       >
         <div className="px-4 pt-4 pb-3 space-y-4"> 
-        <a
+          <Link
             href="#home"
             className="text-[#ffffff] block px-3 py-2 rounded-md text-base font-medium uppercase font-JosefinSans"
           >
             Home
-          </a>
+          </Link>
           
           <hr className="border-[#ffffff] border-opacity-20 my-2" /> 
           
-          <a
+          <Link
             href="#about"
             className="text-[#ffffff] block px-3 py-2 rounded-md text-base font-medium uppercase font-JosefinSans"
           >
             About
-          </a>
+          </Link>
           
           <hr className="border-[#ffffff] border-opacity-20 my-2" /> 
           
-          <a
+          <Link
             href="#services"
             className="text-[#ffffff] block px-3 py-2 rounded-md text-base font-medium uppercase font-JosefinSans"
           >
             Services
-          </a>
+          </Link>
           
           <hr className="border-[#ffffff] border-opacity-20 my-2" /> 
           
-          <a
+          <Link
             href="#ourwork"
             className="text-[#ffffff] block px-3 py-2 rounded-md text-base font-medium uppercase font-JosefinSans"
           >
             Our Work
-          </a>
+          </Link>
           
           <hr className="border-[#ffffff] border-opacity-20 my-2" /> 
 
-          <a
-            href="#ourwork"
+          <Link
+            href="#blog"
             className="text-[#ffffff] block px-3 py-2 rounded-md text-base font-medium uppercase font-JosefinSans"
           >
             Blog
-          </a>
+          </Link>
           
           <hr className="border-[#ffffff] border-opacity-20 my-2" /> 
           
-          <a
+          <Link
             href="#contact"
             className="text-[#ffffff] block px-3 py-2 rounded-md text-base font-medium uppercase font-JosefinSans"
           >
             Contact
-          </a>
+          </Link>
           
         </div>
       </div>

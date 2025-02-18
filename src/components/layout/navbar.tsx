@@ -130,7 +130,7 @@ const Navbar: React.FC = () => {
           <hr className="border-[#ffffff] border-opacity-20 my-2" /> 
           
           <Link
-            href="#services"
+            href="services"
             className="text-[#ffffff] block px-3 py-2 rounded-md text-base font-medium uppercase font-JosefinSans"
           >
             Services
@@ -139,7 +139,7 @@ const Navbar: React.FC = () => {
           <hr className="border-[#ffffff] border-opacity-20 my-2" /> 
           
           <Link
-            href="#ourwork"
+            href="ourwork"
             className="text-[#ffffff] block px-3 py-2 rounded-md text-base font-medium uppercase font-JosefinSans"
           >
             Our Work
@@ -148,7 +148,7 @@ const Navbar: React.FC = () => {
           <hr className="border-[#ffffff] border-opacity-20 my-2" /> 
 
           <Link
-            href="#blog"
+            href="blog"
             className="text-[#ffffff] block px-3 py-2 rounded-md text-base font-medium uppercase font-JosefinSans"
           >
             Blog
@@ -157,7 +157,7 @@ const Navbar: React.FC = () => {
           <hr className="border-[#ffffff] border-opacity-20 my-2" /> 
           
           <Link
-            href="#contact"
+            href="contact"
             className="text-[#ffffff] block px-3 py-2 rounded-md text-base font-medium uppercase font-JosefinSans"
           >
             Contact

@@ -131,9 +131,6 @@ const Navbar: React.FC = () => {
           </Link>
           
           <hr className="border-[#ffffff] border-opacity-20 my-2" /> 
-          
-          
-          <hr className="border-[#ffffff] border-opacity-20 my-2" /> 
 
           <Link
             href="blog"

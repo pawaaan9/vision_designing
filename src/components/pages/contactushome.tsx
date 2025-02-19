@@ -11,8 +11,9 @@ export function ContactUsHome() {
           Contact Us
         </h1>
         <p className="text-neutral-500 mt-2">
-          Get in touch with us for any queries or collaborations. Fill out the
-          form below and we&apos;ll get back to you soon!
+          Are you ready to take your business to the next level? Let’s create
+          something extraordinary together. Explore our services or contact us
+          today for a consultation!
         </p>
       </div>
 

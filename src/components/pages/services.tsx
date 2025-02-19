@@ -1,37 +1,64 @@
 "use client";
 import React from "react";
 import { BackgroundBeams } from "../ui/background-beams";
+import { Timeline } from "../ui/timeline";
 
 export default function Services() {
-  const services = [
+  const timelineData = [
     {
-      title: "Website & App Development",
-      description:
-        "Our team creates responsive, user-friendly platforms tailored to your business needs, ensuring a seamless experience for your users.",
-      icon: "💻",
+      title: "Web & Mobile Development",
+      content: (
+        <div>
+          <p className="text-white dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            Built and launched Aceternity UI and Aceternity UI Pro from scratch
+          </p>
+        </div>
+      ),
     },
     {
-      title: "Custom Solutions",
-      description:
-        "We craft custom software and applications that address your unique challenges and drive your business forward, providing functionality and efficiency.",
-      icon: "🗃️",
-    },
-    {
-      title: "Consulting & Marketing",
-      description:
-        "Our insights and strategies help you optimize your digital presence, reach your target audience, and achieve your business goals.",
-      icon: "🤝",
+      title: "Business Solutions & Automation",
+      content: (
+        <div>
+          <p className="text-white dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            Built and launched Aceternity UI and Aceternity UI Pro from scratch
+          </p>
+        </div>
+      ),
     },
     {
       title: "Hosting & Maintenance",
-      description:
-        "We offer secure, high-performance hosting solutions and proactive maintenance to keep your website and apps running smoothly and efficiently.",
-      icon: "☁️",
+      content: (
+        <div>
+          <p className="text-white dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            Built and launched Aceternity UI and Aceternity UI Pro from scratch
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Frontend & Backend Development",
+      content: (
+        <div>
+          <p className="text-white dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            Built and launched Aceternity UI and Aceternity UI Pro from scratch
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Branding & Digital Marketing",
+      content: (
+        <div>
+          <p className="text-white dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            Built and launched Aceternity UI and Aceternity UI Pro from scratch
+          </p>
+        </div>
+      ),
     },
   ];
 
   return (
-    <div className="relative min-h-screen w-full bg-black flex flex-col items-center justify-center antialiased font-JosefinSans px-4 sm:px-8">
+    <div className="relative min-h-screen w-full bg-black flex flex-col items-center justify-center antialiased font-JosefinSans px-[20%]">
       {/* Background Beams */}
       <BackgroundBeams />
 
@@ -39,17 +66,12 @@ export default function Services() {
         <h1 className="text-2xl sm:text-4xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-bold">
           Our Services
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-[#101637] p-6 rounded-xl text-white shadow-lg transition-colors duration-300 hover:bg-[#1a1f3d]"
-            >
-              <span className="text-3xl">{service.icon}</span>
-              <h2 className="text-xl font-bold mt-2">{service.title}</h2>
-              <p className="mt-2 text-neutral-300">{service.description}</p>
-            </div>
-          ))}
+      </div>
+      {/* Timeline Section */}
+      <div className="w-full mt-16 relative">
+        <BackgroundBeams />
+        <div className="relative z-10">
+          <Timeline data={timelineData} />
         </div>
       </div>
     </div>

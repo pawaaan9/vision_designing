@@ -9,17 +9,17 @@ const overviews = [
   {
     title: "Solution",
     description:
-      "Discover bespoke digital solutions tailored to your business needs. Our services help solve challenges and enhance operations.",
+      "Discover bespoke digital solutions tailored to your business needs. Our comprehensive services—from strategic consulting to advanced tech development are designed to solve challenges and enhance your operations. Partner with us for innovative solutions that drive success",
   },
   {
     title: "Innovation",
     description:
-      "We push boundaries with cutting-edge technology, helping you stay ahead in a fast-evolving digital world.",
+      "Transform your vision into reality with cutting-edge solutions. At vision designing, we harness the latest technology to innovate and bring fresh ideas to life. Whether it's web development, mobile apps, or custom solutions, we ensure your business stays ahead of the curve.",
   },
   {
     title: "Creativity",
     description:
-      "Our creative approach transforms ideas into reality, delivering impactful and engaging digital experiences.",
+      "Unlock your brand's full potential with our creative expertise. From stunning website designs to intuitive mobile apps, our team crafts tailor-made solutions that captivate and engage your audience. Let us turn your ideas into compelling digital experiences.",
   },
 ];
 
@@ -32,12 +32,13 @@ export default function Hero() {
       <BackgroundBeams />
 
       {/* Main Content */}
-      <div className="relative z-10 text-center -mt-24">
-        <h2 className="text-lg sm:text-xl font-semibold tracking-wide">VISION DESIGNING</h2>
+      <div className="relative z-10 text-center -mt-10">
+        <h1 className="text-lg sm:text-xl font-semibold tracking-wide">VISION DESIGNING</h1>
         <WordRotate
           className="text-3xl sm:text-5xl lg:text-7xl font-extrabold mt-2"
           words={["SOLUTION", "INNOVATION", "CREATIVITY"]}
         />
+        <h2 className="text-lg sm:text-xl font-semibold tracking-wide">BRING YOUR VISION TO REALITY</h2>
       </div>
 
       {/* Overview Section */}
@@ -52,7 +53,7 @@ export default function Hero() {
       </div>
 
       {/* Navigation Dots */}
-      <div className="absolute bottom-14 sm:bottom-20 flex space-x-3 z-10">
+      <div className="absolute bottom-10 left-8 sm:bottom-20 sm:left-1/2 sm:transform sm:-translate-x-1/2 flex space-x-3 z-10 mb-5">
         {overviews.map((_, index) => (
           <button
             key={index}
@@ -65,7 +66,7 @@ export default function Hero() {
       </div>
 
       {/* Social Links */}
-      <div className="absolute bottom-6 sm:bottom-16 right-8 sm:right-16 flex items-center space-x-4 sm:space-x-6 z-10">
+      <div className="absolute bottom-6 sm:bottom-16 right-8 sm:right-16 flex items-center space-x-4 sm:space-x-6 z-10 mb-8">
         <p className="text-xs sm:text-sm uppercase tracking-wider">Follow Us</p>
         <FaFacebookF className="text-base sm:text-lg cursor-pointer hover:text-gray-300" />
         <FaInstagram className="text-base sm:text-lg cursor-pointer hover:text-gray-300" />

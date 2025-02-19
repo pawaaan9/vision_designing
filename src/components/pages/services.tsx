@@ -31,15 +31,15 @@ export default function Services() {
   ];
 
   return (
-    <div className="relative h-screen w-full bg-black flex flex-col items-center justify-center antialiased font-JosefinSans">
+    <div className="relative min-h-screen w-full bg-black flex flex-col items-center justify-center antialiased font-JosefinSans px-4 sm:px-8">
       {/* Background Beams */}
       <BackgroundBeams />
 
       <div className="max-w-4xl mx-auto p-6 relative z-10">
-        <h1 className="text-lg md:text-6xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-bold">
+        <h1 className="text-2xl sm:text-4xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-bold">
           Our Services
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
           {services.map((service, index) => (
             <div
               key={index}

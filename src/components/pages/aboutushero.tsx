@@ -7,12 +7,6 @@ import digitalProductsImage from "../../assets/about/our-product.png";
 
 export default function AboutUsHero() {
 
-    const mapConnections = [
-        {
-            start: { lat: 25.7617, lng: -80.1918, label: "Miami, Florida, USA" }, 
-            end: { lat: -8.2906, lng: 80.6337, label: "Kandy, Sri Lanka" }, 
-        },
-    ];
 
   return (
     <div className="relative w-full flex flex-col justify-center items-center text-white font-JosefinSans bg-black px-4 sm:px-8">

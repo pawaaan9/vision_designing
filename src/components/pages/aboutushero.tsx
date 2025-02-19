@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import { BackgroundBeams } from "../ui/background-beams";
-import { WorldMap } from "../ui/world-map";
 import digitalProductsImage from "../../assets/about/our-product.png";
 
 export default function AboutUsHero() {

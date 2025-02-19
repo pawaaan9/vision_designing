@@ -32,7 +32,7 @@ export default function Hero() {
       <BackgroundBeams />
 
       {/* Main Content */}
-      <div className="relative z-10 text-center -mt-10">
+      <div className="relative z-10 text-center">
         <h1 className="text-lg sm:text-xl font-semibold tracking-wide">VISION DESIGNING</h1>
         <WordRotate
           className="text-3xl sm:text-5xl lg:text-7xl font-extrabold mt-2"

@@ -41,10 +41,11 @@ const Footer: React.FC = () => {
           <div className="lg:w-1/2 text-center lg:text-right">
             <h3 className="text-xl font-semibold mb-3 font-JosefinSans">Our Services</h3>
             <ul className="text-gray-300 space-y-2">
-              <li className="font-JosefinSans">Website & App Development</li>
-              <li className="font-JosefinSans">Custom Solutions</li>
-              <li className="font-JosefinSans">Consulting & Marketing</li>
+              <li className="font-JosefinSans">Web & Mobile Development</li>
+              <li className="font-JosefinSans">Business Solutions & Automation</li>
               <li className="font-JosefinSans">Hosting & Maintenance</li>
+              <li className="font-JosefinSans">Frontend & Backend Development</li>
+              <li className="font-JosefinSans">Branding & Digital Marketing</li>
             </ul>
           </div>
         </div>

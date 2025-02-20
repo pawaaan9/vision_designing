@@ -4,10 +4,11 @@ import React from "react";
 import Image from "next/image";
 import { BackgroundBeams } from "../ui/background-beams";
 import { WorldMap } from "../ui/world-map";
-import companyOverviewImage from "../../assets/about/our-product.png";
-import visionImage from "../../assets/about/our-product.png";
-import missionImage from "../../assets/about/our-product.png";
-import whyChooseUsImage from "../../assets/about/our-product.png";
+import visionImage from "../../assets/vision.png";
+import missionImage from "../../assets/mission.png";
+import ourTeam from "../../assets/our-team.png";
+import whoweare from "../../assets/who-we-are.png"
+import ourstory from "../../assets/our-story.png"
 
 export default function About() {
   const mapConnections = [
@@ -54,7 +55,7 @@ export default function About() {
           </div>
           <div>
             <Image
-              src={companyOverviewImage}
+              src={whoweare}
               alt="Company Overview"
               className="w-full rounded-lg"
             />
@@ -112,7 +113,7 @@ export default function About() {
         <section className="grid lg:grid-cols-2 lg:gap-12 items-center">
           <div>
             <Image
-              src={whyChooseUsImage}
+              src={ourstory}
               alt="Why Choose Us?"
               className="w-full rounded-lg"
             />
@@ -147,7 +148,7 @@ export default function About() {
           </div>
           <div>
             <Image
-              src={missionImage}
+              src={ourTeam}
               alt="Mission"
               className="w-full rounded-lg"
             />

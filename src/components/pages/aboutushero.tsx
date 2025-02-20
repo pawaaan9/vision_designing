@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { BackgroundBeams } from "../ui/background-beams";
-import digitalProductsImage from "../../assets/about/our-product.png";
+import digitalProductsImage from "../../assets/home-products.png";
 
 export default function AboutUsHero() {
   return (

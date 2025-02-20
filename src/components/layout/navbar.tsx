@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
-  const [navBg, setNavBg] = useState("bg-black"); // Default navbar background
+  const [navBg, setNavBg] = useState("bg-black"); 
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);

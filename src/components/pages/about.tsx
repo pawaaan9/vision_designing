@@ -11,29 +11,6 @@ import whoweare from "../../assets/who-we-are.png"
 import ourstory from "../../assets/our-story.png"
 
 export default function About() {
-  const mapConnections = [
-    {
-      start: { lat: 25.7617, lng: -80.1918, label: "Miami, Florida, USA" },
-      end: { lat: -8.2906, lng: 80.6337, label: "Kandy, Sri Lanka" },
-    },
-    {
-      start: { lat: 38.8951, lng: -77.0364, label: "Washington, USA" },
-      end: { lat: -8.2906, lng: 80.6337, label: "Kandy, Sri Lanka" },
-    },
-    {
-      start: { lat: 45.4215, lng: -75.6972, label: "Ottawa, Canada" },
-      end: { lat: -8.2906, lng: 80.6337, label: "Kandy, Sri Lanka" },
-    },
-    {
-      start: { lat: 25.7617, lng: -80.1918, label: "Miami, Florida, USA" },
-      end: { lat: 38.8951, lng: -77.0364, label: "Washington, USA" },
-    },
-    {
-      start: { lat: 38.8951, lng: -77.0364, label: "Washington, USA" },
-      end: { lat: 45.4215, lng: -75.6972, label: "Ottawa, Canada" },
-    },
-  ];
-
   return (
     <div className="relative w-full flex flex-col justify-center items-center text-white font-JosefinSans bg-black px-4 sm:px-8">
       <BackgroundBeams />

@@ -27,18 +27,18 @@ export default function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="relative h-screen w-full flex flex-col justify-center items-center text-white font-JosefinSans bg-black px-4 sm:px-8">
+    <div className="relative h-screen w-full flex flex-col justify-center items-center text-white font-JosefinSans bg-black px-4 sm:px-5">
       {/* Background Animation */}
       <BackgroundBeams />
 
       {/* Main Content */}
-      <div className="relative z-10 text-center">
+      <div className="relative z-10 text-center mb-24 sm:mt-2">
         <h1 className="text-lg sm:text-xl font-semibold tracking-wide">VISION DESIGNING</h1>
         <WordRotate
-          className="text-3xl sm:text-5xl lg:text-7xl font-extrabold mt-2"
+          className="text-4xl sm:text-7xl lg:text-7xl font-extrabold mt-2"
           words={["SOLUTION", "INNOVATION", "CREATIVITY"]}
         />
-        <h2 className="text-lg sm:text-xl font-semibold tracking-wide">BRING YOUR VISION TO REALITY</h2>
+        <h2 className="text-lg sm:text-xl font-semibold tracking-wide">Bring Your Vision In To Reality</h2>
       </div>
 
       {/* Overview Section */}

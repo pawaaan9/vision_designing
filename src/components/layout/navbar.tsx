@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
@@ -56,7 +56,9 @@ const Navbar: React.FC = () => {
           <div className="flex justify-between h-16 items-center">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <Image src={logo} alt="home" width={120} height={120} />
+              <Link href="/">
+                <Image src={logo} alt="home" width={120} height={120} />
+              </Link>
             </div>
 
             {/* Desktop Navigation */}

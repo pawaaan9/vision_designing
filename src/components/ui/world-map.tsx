@@ -7,22 +7,21 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 
 interface MapProps {
-  dots?: Array<{
-    start: { lat: number; lng: number; label?: string };
-    end: { lat: number; lng: number; label?: string };
-  }>;
+  start?: { lat: number; lng: number };
   lineColor?: string;
+  spreadCount?: number;
 }
 
 export function WorldMap({
-  dots = [],
+  start = { lat: 27.9944024, lng: -81.7602544 }, // Florida, USA
   lineColor = "#0ea5e9",
+  spreadCount = 10,
 }: MapProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const map = new DottedMap({ height: 100, grid: "diagonal" });
-
   const { theme } = useTheme();
-  const [animationTrigger, setAnimationTrigger] = useState(0);
+  const [, setAnimationTrigger] = useState(0);
+  const [endPoints, setEndPoints] = useState<Array<{ lat: number; lng: number }>>([]);
 
   const svgMap = map.getSVG({
     radius: 0.22,
@@ -30,6 +29,22 @@ export function WorldMap({
     shape: "circle",
     backgroundColor: theme === "dark" ? "black" : "white",
   });
+
+  useEffect(() => {
+    // Generate random worldwide endpoints
+    const newEndPoints = Array.from({ length: spreadCount }, () => ({
+      lat: Math.random() * 180 - 90, // Random latitude (-90 to 90)
+      lng: Math.random() * 360 - 180, // Random longitude (-180 to 180)
+    }));
+    setEndPoints(newEndPoints);
+  }, [spreadCount]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnimationTrigger((prev) => prev + 1);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const projectPoint = (lat: number, lng: number) => {
     const x = (lng + 180) * (800 / 360);
@@ -46,14 +61,6 @@ export function WorldMap({
     return `M ${start.x} ${start.y} Q ${midX} ${midY} ${end.x} ${end.y}`;
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setAnimationTrigger((prev) => prev + 1);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="w-full aspect-[2/1] dark:bg-black bg-white rounded-lg relative font-sans">
       <Image
@@ -69,30 +76,20 @@ export function WorldMap({
         viewBox="0 0 800 400"
         className="w-full h-full absolute inset-0 pointer-events-none select-none"
       >
-        {dots.map((dot, i) => {
-          const startPoint = projectPoint(dot.start.lat, dot.start.lng);
-          const endPoint = projectPoint(dot.end.lat, dot.end.lng);
+        {endPoints.map((end, i) => {
+          const startPoint = projectPoint(start.lat, start.lng);
+          const endPoint = projectPoint(end.lat, end.lng);
           return (
-            <g key={`path-group-${i}`}>
-              <motion.path
-                d={createCurvedPath(startPoint, endPoint)}
-                fill="none"
-                stroke="url(#path-gradient)"
-                strokeWidth="1"
-                initial={{
-                  pathLength: 0,
-                }}
-                animate={{
-                  pathLength: 1,
-                }}
-                transition={{
-                  duration: 1,
-                  delay: 0.5 * i,
-                  ease: "easeOut",
-                }}
-                key={`start-upper-${i}-${animationTrigger}`}
-              ></motion.path>
-            </g>
+            <motion.path
+              key={`path-${i}`}
+              d={createCurvedPath(startPoint, endPoint)}
+              fill="none"
+              stroke="url(#path-gradient)"
+              strokeWidth="1"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 1, delay: 0.5 * i, ease: "easeOut" }}
+            />
           );
         })}
 
@@ -105,74 +102,13 @@ export function WorldMap({
           </linearGradient>
         </defs>
 
-        {dots.map((dot, i) => (
-          <g key={`points-group-${i}`}>
-            <g key={`start-${i}`}>
-              <circle
-                cx={projectPoint(dot.start.lat, dot.start.lng).x}
-                cy={projectPoint(dot.start.lat, dot.start.lng).y}
-                r="2"
-                fill={lineColor}
-              />
-              <circle
-                cx={projectPoint(dot.start.lat, dot.start.lng).x}
-                cy={projectPoint(dot.start.lat, dot.start.lng).y}
-                r="2"
-                fill={lineColor}
-                opacity="0.5"
-              >
-                <animate
-                  attributeName="r"
-                  from="2"
-                  to="8"
-                  dur="1.5s"
-                  begin="0s"
-                  repeatCount="indefinite"
-                />
-                <animate
-                  attributeName="opacity"
-                  from="0.5"
-                  to="0"
-                  dur="1.5s"
-                  begin="0s"
-                  repeatCount="indefinite"
-                />
-              </circle>
-            </g>
-            <g key={`end-${i}`}>
-              <circle
-                cx={projectPoint(dot.end.lat, dot.end.lng).x}
-                cy={projectPoint(dot.end.lat, dot.end.lng).y}
-                r="2"
-                fill={lineColor}
-              />
-              <circle
-                cx={projectPoint(dot.end.lat, dot.end.lng).x}
-                cy={projectPoint(dot.end.lat, dot.end.lng).y}
-                r="2"
-                fill={lineColor}
-                opacity="0.5"
-              >
-                <animate
-                  attributeName="r"
-                  from="2"
-                  to="8"
-                  dur="1.5s"
-                  begin="0s"
-                  repeatCount="indefinite"
-                />
-                <animate
-                  attributeName="opacity"
-                  from="0.5"
-                  to="0"
-                  dur="1.5s"
-                  begin="0s"
-                  repeatCount="indefinite"
-                />
-              </circle>
-            </g>
-          </g>
-        ))}
+        {/* Starting point in Florida */}
+        <circle
+          cx={projectPoint(start.lat, start.lng).x}
+          cy={projectPoint(start.lat, start.lng).y}
+          r="3"
+          fill={lineColor}
+        />
       </svg>
     </div>
   );

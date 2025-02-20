@@ -30,7 +30,7 @@ export default function IndustriesPage() {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className="border p-6 rounded-lg shadow-lg border-gray-700 hover:bg-gray-800 transition-colors duration-300"
+              className="border p-6 rounded-lg shadow-lg border-white-800 hover:bg-[#101637] transition-colors duration-300"
             >
               <h3 className="text-xl font-bold text-neutral-200">{industry.title}</h3>
             </div>

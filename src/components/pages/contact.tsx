@@ -33,7 +33,7 @@ export function Contact() {
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen bg-black text-white antialiased font-JosefinSans">
       <div className="max-w-2xl mx-auto p-4 text-center">
-        <h1 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 p-6">
+        <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 p-6">
           Contact Us
         </h1>
         <p className="text-neutral-500 mt-2">

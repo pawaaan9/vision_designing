@@ -40,7 +40,7 @@ export default function About() {
         {/* Company Overview */}
         <section className="grid lg:grid-cols-2 lg:gap-12 items-center">
           <div className="max-w-2xl">
-            <h2 className="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 uppercase p-6">
+            <h2 className="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 p-6">
               Who we are?
             </h2>
             <p className="text-sm sm:text-lg mt-4 leading-relaxed">
@@ -73,7 +73,7 @@ export default function About() {
             />
           </div>
           <div className="max-w-2xl">
-            <h2 className="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 uppercase">
+            <h2 className="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 ">
               Our Vision
             </h2>
             <p className="text-sm sm:text-lg mt-4 leading-relaxed">
@@ -89,7 +89,7 @@ export default function About() {
         {/* Mission */}
         <section className="grid lg:grid-cols-2 lg:gap-12 items-center">
           <div className="max-w-2xl">
-            <h2 className="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 uppercase">
+            <h2 className="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 ">
               Our Mission
             </h2>
             <p className="text-sm sm:text-lg mt-4 leading-relaxed">
@@ -118,7 +118,7 @@ export default function About() {
             />
           </div>
           <div className="max-w-2xl">
-            <h2 className="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 uppercase">
+            <h2 className="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600">
               Our Story
             </h2>
             <p className="text-sm sm:text-lg mt-4 leading-relaxed">
@@ -137,7 +137,7 @@ export default function About() {
         
         <section className="grid lg:grid-cols-2 lg:gap-12 items-center">
           <div className="max-w-2xl">
-            <h2 className="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 uppercase">
+            <h2 className="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 ">
             Our Team 
             </h2>
             <p className="text-sm sm:text-lg mt-4 leading-relaxed">
@@ -158,7 +158,7 @@ export default function About() {
 
         {/* Why Choose Us? */}
         <section className="space-y-8">
-          <h2 className="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 uppercase text-center">
+          <h2 className="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center">
             Why Choose Us?
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -199,7 +199,7 @@ export default function About() {
 
         {/* World Map Section */}
         <section>
-          <h2 className="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 uppercase text-center p-6">
+          <h2 className="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center p-6">
             Our Global Reach
           </h2>
           <WorldMap dots={mapConnections} />

@@ -1,19 +1,41 @@
 "use client"; 
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '@/assets/Vision-Designing-Logo.png'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false); 
+  const [showNavbar, setShowNavbar] = useState(true);
+const [lastScrollY, setLastScrollY] = useState(0);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        setShowNavbar(false); 
+      } else {
+        setShowNavbar(true); 
+      }
+      setLastScrollY(window.scrollY);
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+  
+
   return (
-    <nav style={{ backgroundColor: "#101637" }}>
+    <nav
+  className={`fixed top-0 left-0 w-full bg-[#101637] transition-transform duration-300 z-50 ${
+    showNavbar ? "translate-y-0" : "-translate-y-full"
+  }`}
+>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
       

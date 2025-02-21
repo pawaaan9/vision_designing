@@ -119,24 +119,24 @@ const Navbar: React.FC = () => {
           }`}
           id="mobile-menu"
         >
-          <div className="px-8 pt-10 pb-80 space-y-12 bg-black h-100%">
-            <Link href="/" className="text-white block px-3 py-2 rounded-md text-base font-medium uppercase">
+          <div className="px-8 pt-12 pb-80 space-y-12 bg-black h-100%">
+            <Link href="/" className="text-white block px-3 py-1 rounded-md text-base font-medium uppercase">
               Home
             </Link>
             <hr className="border-white border-opacity-20 my-2" />
-            <Link href="/about" className="text-white block px-3 py-2 rounded-md text-base font-medium uppercase">
+            <Link href="/about" className="text-white block px-3 py-1 rounded-md text-base font-medium uppercase">
               About
             </Link>
             <hr className="border-white border-opacity-20 my-2" />
-            <Link href="/services" className="text-white block px-3 py-2 rounded-md text-base font-medium uppercase">
+            <Link href="/services" className="text-white block px-3 py-1 rounded-md text-base font-medium uppercase">
               Services
             </Link>
             <hr className="border-white border-opacity-20 my-2" />
-            <Link href="/blog" className="text-white block px-3 py-2 rounded-md text-base font-medium uppercase">
+            <Link href="/blog" className="text-white block px-3 py-1 rounded-md text-base font-medium uppercase">
               Blog
             </Link>
             <hr className="border-white border-opacity-20 my-2" />
-            <Link href="/contact" className="text-white block px-3 py-2 rounded-md text-base font-medium uppercase">
+            <Link href="/contact" className="text-white block px-3 py-1 rounded-md text-base font-medium uppercase">
               Contact
             </Link>
           </div>

@@ -119,7 +119,7 @@ const Navbar: React.FC = () => {
           }`}
           id="mobile-menu"
         >
-          <div className="px-8 pt-10 pb-80 space-y-4 bg-black">
+          <div className="px-8 pt-10 pb-80 space-y-12 bg-black h-100%">
             <Link href="/" className="text-white block px-3 py-2 rounded-md text-base font-medium uppercase">
               Home
             </Link>

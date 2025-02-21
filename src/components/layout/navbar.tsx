@@ -114,12 +114,12 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed inset-y-0 left-0 transform transition-transform duration-300 ease-in-out bg-black w-64 z-50 ${
+          className={`fixed inset-y-0 left-0 transform transition-transform duration-300 ease-in-out bg-[#101637] w-64 z-50 ${
             isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
           id="mobile-menu"
         >
-          <div className="px-8 pt-12 pb-80 space-y-12 bg-black h-100%">
+          <div className="px-8 pt-12 pb-80 space-y-12 bg-[#101637] h-100%">
             <Link href="/" className="text-white block px-3 py-1 rounded-md text-base font-medium uppercase">
               Home
             </Link>
@@ -143,7 +143,7 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Overlay when mobile menu is open */}
-        {isOpen && <div onClick={toggleMenu} className="fixed inset-0 bg-black opacity-50 z-40" />}
+        {isOpen && <div onClick={toggleMenu} className="fixed inset-0 bg-[#101637] opacity-50 z-40" />}
       </nav>
 
       {/* Page content wrapper (ensures content is pushed below navbar) */}

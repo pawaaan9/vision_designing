@@ -5,7 +5,6 @@ import Stats from "@/components/pages/happyclients";
 import AboutUsHero from "@/components/pages/aboutushero";
 import QuickOverview from "@/components/pages/quickoverview";
 import { ContactUsHome } from "@/components/pages/contactushome";
-import Map from "@/components/pages/map";
 
 export default function Home() {
   return (
@@ -15,7 +14,7 @@ export default function Home() {
       <AboutUsHero/>
       <Stats />
       <QuickOverview/>
-      <Map/>
+      {/* <Map/> */}
       <ContactUsHome/>
       <Footer/>
     </>

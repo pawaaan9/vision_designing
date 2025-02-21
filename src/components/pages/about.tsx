@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import { BackgroundBeams } from "../ui/background-beams";
-import { WorldMap } from "../ui/world-map";
 import visionImage from "../../assets/vision.png";
 import missionImage from "../../assets/mission.png";
 import ourTeam from "../../assets/our-team.png";
@@ -180,7 +179,7 @@ export default function About() {
           <h2 className="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center p-6">
             Our Global Reach
           </h2>
-          <WorldMap start={{ lat: 12.9944024, lng: -82.7602544 }} />
+          {/* <WorldMap start={{ lat: 12.9944024, lng: -82.7602544 }} /> */}
         </section>
       </div>
     </div>

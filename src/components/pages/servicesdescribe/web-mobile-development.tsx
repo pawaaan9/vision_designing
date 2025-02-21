@@ -2,10 +2,11 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { BackgroundBeams } from "../../ui/background-beams";
-import topImage from "../../../assets/projects/448870248_319998964501705_2257420437119999383_n-290x300.jpg"; // Replace with actual image path
+import topImage from "../../../assets/projects/448870248_319998964501705_2257420437119999383_n-290x300.jpg"; 
 
-export default function Skipjack() {
+export default function WebMobile() {
   return (
     <div className="relative w-full flex flex-col items-center text-white font-JosefinSans bg-black px-4 sm:px-8 min-h-screen">
       {/* Background Animation */}
@@ -13,13 +14,14 @@ export default function Skipjack() {
 
       {/* Back Button */}
       <div className="w-full flex justify-start max-w-6xl mt-6 px-4">
-        <a
-          href="/ourwork"
-          className="border text-white px-6 py-3 rounded-lg text-sm sm:text-base hover:bg-gray-700 transition"
-        >
+        <Link href="/services" className="border text-white px-6 py-3 rounded-lg text-sm sm:text-base hover:bg-gray-700 transition">
           &larr; Back
-        </a>
+        </Link>
       </div>
+
+      <h1 className="text-3xl sm:text-5xl font-extrabold mb-6">
+            Skipjack Outfitters
+          </h1>
 
       {/* Top Image */}
       <div className="relative z-10 w-full max-w-4xl mt-6">
@@ -27,11 +29,8 @@ export default function Skipjack() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col lg:flex-row max-w-6xl mt-8">
+      <div className="relative z-10 flex flex-col lg:flex-row max-w-6xl mt-8 p-6">
         <div className="lg:w-2/3 p-6">
-          <h1 className="text-3xl sm:text-5xl font-extrabold uppercase mb-6">
-            Skipjack Outfitters
-          </h1>
           <p className="text-base sm:text-lg leading-relaxed">
             We create everything digital, printable and analytical. Our solutions are designed to empower businesses and elevate their digital presence.
           </p>

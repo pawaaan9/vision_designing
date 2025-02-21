@@ -7,6 +7,7 @@ export default function Services() {
   const timelineData = [
     {
       title: "Web & Mobile Development",
+      link: "/services/web-mobile-development",
       content: (
         <div>
           <ul className="text-white dark:text-neutral-200 text-xs lg:text-lg md:text-sm font-bold mb-8 list-disc pl-5">
@@ -20,6 +21,7 @@ export default function Services() {
     },
     {
       title: "Business Solutions & Automation",
+      link: "/services/web-mobile-development",
       content: (
         <div>
           <ul className="text-white dark:text-neutral-200 text-xs md:text-sm lg:text-lg font-bold mb-8 list-disc pl-5">
@@ -32,6 +34,7 @@ export default function Services() {
     },
     {
       title: "Hosting & Maintenance",
+      link: "/services/web-mobile-development",
       content: (
         <div>
           <ul className="text-white dark:text-neutral-200 text-xs md:text-sm lg:text-lg font-bold mb-8 list-disc pl-5">
@@ -44,6 +47,7 @@ export default function Services() {
     },
     {
       title: "Frontend & Backend Development",
+      link: "/services/web-mobile-development",
       content: (
         <div>
           <ul className="text-white dark:text-neutral-200 text-xs md:text-sm lg:text-lg font-bold mb-8 list-disc pl-5">
@@ -56,6 +60,7 @@ export default function Services() {
     },
     {
       title: "Branding & Digital Marketing",
+      link: "/services/web-mobile-development",
       content: (
         <div>
           <ul className="text-white dark:text-neutral-200 text-xs md:text-sm lg:text-lg font-bold mb-8 list-disc pl-5">

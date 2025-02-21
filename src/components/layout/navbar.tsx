@@ -1,16 +1,15 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import logo from '@/assets/Vision-Designing-Logo.png';
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import logo from "@/assets/Vision-Designing-Logo.png";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-  const [navBg, setNavBg] = useState("bg-black"); 
+  const [, setIsMobile] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -18,17 +17,15 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-        setShowNavbar(false);
+      if (window.innerWidth >= 768) {
+        if (window.scrollY > lastScrollY) {
+          setShowNavbar(false);
+        } else {
+          setShowNavbar(true);
+        }
       } else {
         setShowNavbar(true);
-        setNavBg("bg-[#101637] bg-opacity-90 backdrop-blur-md");
       }
-
-      if (window.scrollY === 0) {
-        setNavBg("bg-black");
-      }
-
       setLastScrollY(window.scrollY);
     };
 
@@ -47,9 +44,9 @@ const Navbar: React.FC = () => {
     <>
       {/* Navbar */}
       <nav
-        className={`fixed top-0 left-0 w-full transition-transform duration-300 z-50 ${
-          showNavbar || isMobile ? "translate-y-0" : "-translate-y-full font-JosefinSans"
-        } ${isMobile ? "bg-black" : navBg}`}
+        className={`fixed top-0 left-0 w-full transition-transform duration-300 z-50 bg-black ${
+          showNavbar ? "translate-y-0" : "-translate-y-full"
+        }`}
         style={{ height: "4rem" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,15 +80,15 @@ const Navbar: React.FC = () => {
             {/* Mobile Menu Button */}
             <div className="-mr-2 flex md:hidden">
               <button
-                onClick={toggleMenu} 
+                onClick={toggleMenu}
                 type="button"
-                className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white"
+                className="bg-black inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white"
                 aria-controls="mobile-menu"
-                aria-expanded={isOpen ? "true" : "false"} 
+                aria-expanded={isOpen ? "true" : "false"}
               >
                 <span className="sr-only">Open main menu</span>
                 <svg
-                  className={`${isOpen ? 'hidden' : 'block'} h-6 w-6`} 
+                  className={`${isOpen ? "hidden" : "block"} h-6 w-6`}
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -101,7 +98,7 @@ const Navbar: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
                 <svg
-                  className={`${isOpen ? 'block' : 'hidden'} h-6 w-6`} 
+                  className={`${isOpen ? "block" : "hidden"} h-6 w-6`}
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -117,40 +114,40 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed inset-y-0 left-0 transform transition-transform duration-300 ease-in-out bg-[#101637] w-64 z-50 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
+          className={`fixed inset-y-0 left-0 transform transition-transform duration-300 ease-in-out bg-black w-64 z-50 ${
+            isOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
           id="mobile-menu"
         >
-          <div className="px-4 pt-4 pb-3 space-y-4"> 
+          <div className="px-8 pt-10 pb-80 space-y-4 bg-black">
             <Link href="/" className="text-white block px-3 py-2 rounded-md text-base font-medium uppercase">
               Home
             </Link>
-            <hr className="border-white border-opacity-20 my-2" /> 
+            <hr className="border-white border-opacity-20 my-2" />
             <Link href="/about" className="text-white block px-3 py-2 rounded-md text-base font-medium uppercase">
               About
             </Link>
-            <hr className="border-white border-opacity-20 my-2" /> 
+            <hr className="border-white border-opacity-20 my-2" />
             <Link href="/services" className="text-white block px-3 py-2 rounded-md text-base font-medium uppercase">
               Services
             </Link>
-            <hr className="border-white border-opacity-20 my-2" /> 
+            <hr className="border-white border-opacity-20 my-2" />
             <Link href="/blog" className="text-white block px-3 py-2 rounded-md text-base font-medium uppercase">
               Blog
             </Link>
-            <hr className="border-white border-opacity-20 my-2" /> 
+            <hr className="border-white border-opacity-20 my-2" />
             <Link href="/contact" className="text-white block px-3 py-2 rounded-md text-base font-medium uppercase">
               Contact
             </Link>
           </div>
         </div>
-        
+
         {/* Overlay when mobile menu is open */}
-        {isOpen && (
-          <div onClick={toggleMenu} className="fixed inset-0 bg-black opacity-50 z-40" />
-        )}
+        {isOpen && <div onClick={toggleMenu} className="fixed inset-0 bg-black opacity-50 z-40" />}
       </nav>
 
       {/* Page content wrapper (ensures content is pushed below navbar) */}
-      <div className="mt-16">
+      <div className="mt-16 z-0">
         {/* Your page content will go here */}
       </div>
     </>

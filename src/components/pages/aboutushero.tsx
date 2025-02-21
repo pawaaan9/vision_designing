@@ -38,6 +38,8 @@ export default function AboutUsHero() {
             />
           </div>
         </section>
+
+        <hr className="border-white border-opacity-20 -mt-7" />
       </div>
     </div>
   );
